@@ -1,6 +1,15 @@
-# AzureServerlessWorkshopUA
+# AzureServerlessWorkshopUA (level 200)
 Azure Serverless workshop steps description. Community version of workshop that was run at Lviv and Odesa Microsoft .NET User Groups.
 
+## Steps
+1. Prepare .NET Core Web API for migration to Azure Function app.
+2. Create infrastructure in Azure -> Function App, Key Vault, Storage account with Blob container and queuer, SQL Database... 
+3. Dependency injection in Function App and Unit testing.
+4. Entity Framework Core and Azure SQL integration.
+5. Error handling via Azure Storage Queue and retry policy via Polly. Azure Key Vault for secrets.
+6. Serverless API versioning via Swashbuckle.
+
+OIDC token security was removed to AzureServerlessWorkshop v2(level 300).
 
 ## Prerequisites
 
