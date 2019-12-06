@@ -1,5 +1,6 @@
 # AzureServerlessWorkshopUA (level 200)
 Azure Serverless workshop steps description. Community version of workshop that was run at Lviv and Odesa Microsoft .NET User Groups.
+The goal is to migrate and build Azure Serverless solution. Full code examples and slides will be published later.
 
 ## Steps
 1. Prepare .NET Core Web API for migration to Azure Function app.
