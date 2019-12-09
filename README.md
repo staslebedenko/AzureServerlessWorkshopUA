@@ -3,12 +3,14 @@ Azure Serverless workshop steps description. Community version of workshop that 
 The goal is to migrate and build Azure Serverless solution. Full code examples and slides will be published later.
 
 ## Steps
-1. Prepare .NET Core Web API for migration to Azure Function app.
-2. Create infrastructure in Azure -> Function App, Key Vault, Storage account with Blob container and queuer, SQL Serverless Database... 
-3. Dependency injection in Function App and Unit testing.
-4. Entity Framework Core and Azure SQL integration. Working with Azure SQL Serverless database pros and cons.
-5. Error handling via Azure Storage Queue and retry policy via Polly. Azure Key Vault for secrets.
-6. Serverless API versioning via Swashbuckle.
+Workshop is build around 6 steps that will gradually allow you to get hands on with serverless solutions in Azure.
+
+1. Prepare and migrate .NET Core Web API to Azure Function application.
+2. Create infrastructure in Azure -> Function App, Key Vault, Storage account with Blob container and queue, SQL Serverless Database.
+3. Add dependency injection to Function App and create first Unit test. Deploy application to Azure and use Loader.io to undestand the scale behavior.
+4. Add Entity Framework Core and create the initial migration. Connect solution to Azure SQL Serverless database. Observe results with load test.
+5. Implement error handling and resilence via Azure Storage Queue. Create retry policy via Polly. Add your secrets to Azure Key Vault.
+6. Enhance your Serverless API with versioning via Swashbuckle.
 
 OIDC token security was removed to AzureServerlessWorkshop v2(level 300).
 
