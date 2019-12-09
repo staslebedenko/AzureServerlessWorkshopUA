@@ -4,9 +4,9 @@ The goal is to migrate and build Azure Serverless solution. Full code examples a
 
 ## Steps
 1. Prepare .NET Core Web API for migration to Azure Function app.
-2. Create infrastructure in Azure -> Function App, Key Vault, Storage account with Blob container and queuer, SQL Database... 
+2. Create infrastructure in Azure -> Function App, Key Vault, Storage account with Blob container and queuer, SQL Serverless Database... 
 3. Dependency injection in Function App and Unit testing.
-4. Entity Framework Core and Azure SQL integration.
+4. Entity Framework Core and Azure SQL integration. Working with Azure SQL Serverless database pros and cons.
 5. Error handling via Azure Storage Queue and retry policy via Polly. Azure Key Vault for secrets.
 6. Serverless API versioning via Swashbuckle.
 
@@ -314,7 +314,8 @@ Nicely done!
         --location $location --admin-user $adminLogin --admin-password $password
 
         az sql db create --resource-group $groupName --server $serverName --name $databaseName \
-        --service-objective $serverSku --catalog-collation $catalogCollation
+	--edition GeneralPurpose --family Gen5 --compute-model Serverless \
+	--auto-pause-delay 60 --capacity 4 --catalog-collation $catalogCollation
 
         outboundIps=$(az webapp show --resource-group $groupName --name $applicationName --query possibleOutboundIpAddresses --output tsv)
         IFS=',' read -r -a ipArray <<< "$outboundIps"
